@@ -201,7 +201,7 @@ function RestoreCard() {
                     ['overwrite', '上書きする（バックアップの内容にする）'],
                   ] as const
                 ).map(([v, l]) => (
-                  <label key={v} className="mt-2 flex h-11 items-center gap-2 rounded-lg border border-slate-300 px-3 text-sm">
+                  <label key={v} className="mt-2 flex min-h-11 items-center gap-2 rounded-lg border border-slate-300 px-3 py-2 text-sm">
                     <input type="radio" name="mode" checked={mode === v} onChange={() => setMode(v)} />
                     {l}
                   </label>

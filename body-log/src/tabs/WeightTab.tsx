@@ -1,3 +1,5 @@
-export default function WeightTab(_: { openInput: (date: string) => void }) {
-  return <p className="text-slate-500">準備中</p>;
+import TrendTab from '../components/TrendTab';
+
+export default function WeightTab({ openInput }: { openInput: (date: string) => void }) {
+  return <TrendTab field="weightKg" unit="kg" kind="line" showChange openInput={openInput} />;
 }

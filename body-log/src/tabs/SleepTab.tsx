@@ -1,3 +1,5 @@
-export default function SleepTab(_: { openInput: (date: string) => void }) {
-  return <p className="text-slate-500">準備中</p>;
+import TrendTab from '../components/TrendTab';
+
+export default function SleepTab({ openInput }: { openInput: (date: string) => void }) {
+  return <TrendTab field="sleepHours" unit="時間" kind="bar" showChange={false} openInput={openInput} />;
 }
